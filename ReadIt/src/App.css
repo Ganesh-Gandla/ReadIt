@@ -1,4 +1,7 @@
-*{
+/* =======================================
+   GLOBAL RESET & BASE STYLES
+======================================= */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,73 +13,101 @@ body {
   color: #333;
 }
 
-h1 {
-  text-align: center;
-  margin: 2rem 0;
-}
 
-nav {
+/* =======================================
+   NAVBAR
+======================================= */
+
+/* NAVBAR MAIN LAYOUT */
+.navbar {
   background-color: #333;
-  padding: 0.5rem;
+  padding: 0.7rem 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: relative; 
 }
 
-nav ul {
+/* LEFT NAV LINKS */
+.nav-left {
   list-style: none;
   display: flex;
-  align-items: center;
   gap: 1rem;
 }
 
-nav ul li a {
+.nav-left li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: 0.3s;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+.nav-left li a:hover {
+  background: #555;
 }
 
-nav select{
-  padding: 0.3rem;
-  border-radius: 5px;
-  border: none;
-}
-
-nav select:hover{
-  cursor: pointer;
-}
-
-nav select:focus{
-  outline: none;
-}
-
-nav option{
-  padding: 0.5rem;
-}
-
-nav option:hover{
-  background-color: #ddd;
-  cursor: pointer;
-}
-
-nav option:focus{
-  outline: none;
-}
-
-nav option:checked{
-  background-color: #333;
+/* CENTER TITLE */
+.nav-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   color: white;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* RIGHT SELECT BOX */
+.nav-select {
+  padding: 0.45rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 15px;
+  background: white;
+}
+
+/* MOBILE RESPONSIVE — NAV ONLY */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 14px;
+    padding-bottom: 1rem;
+  }
+
+  .nav-title {
+    position: static;
+    transform: none;
+  }
+
+  .nav-left {
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+  }
+
+  .nav-select {
+    width: 90%;
+    max-width: 300px;
+  }
 }
 
 
+
+/* =======================================
+   GENERAL LAYOUT
+======================================= */
 .container {
   width: 80%;
   margin: auto;
 }
 
+
+
+/* =======================================
+   BOOK ITEM CARD
+======================================= */
 .book-item {
   display: flex;
   gap: 20px;
@@ -84,7 +115,13 @@ nav option:checked{
   background: #fff;
   margin: 12px 0;
   border-radius: 12px;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.book-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
 }
 
 .book-cover {
@@ -100,7 +137,7 @@ nav option:checked{
 
 .book-title {
   font-size: 20px;
-  margin: 0;
+  font-weight: 600;
 }
 
 .book-author,
@@ -108,18 +145,25 @@ nav option:checked{
 .book-pages {
   color: #666;
   margin: 4px 0;
+  font-size: 14px;
 }
 
 .book-description {
   margin-top: 10px;
+  line-height: 1.4;
 }
 
+
+
+/* =======================================
+   SEARCH BOX
+======================================= */
 .searchbox-wrapper {
   display: flex;
   gap: 10px;
   width: 100%;
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0 auto 25px auto;
 }
 
 .searchbox-input {
@@ -133,7 +177,114 @@ nav option:checked{
 
 .searchbox-input:focus {
   border-color: #333;
-  outline: none;
 }
 
 
+
+/* =======================================
+   ABOUT PAGE
+======================================= */
+.about-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  line-height: 1.6;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.about-page h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.about-page h2 {
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.about-page p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.about-page li {
+  margin-bottom: 8px;
+}
+
+
+
+/* =======================================
+   ADD BOOK PAGE
+======================================= */
+.addbook-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.addbook-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.addbook-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.addbook-form input,
+.addbook-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.addbook-form input:focus,
+.addbook-form textarea:focus {
+  border-color: #6666ff;
+  outline: none;
+}
+
+.addbook-form button {
+  background: #4444ff;
+  color: white;
+  padding: 12px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addbook-form button:hover {
+  background: #2222cc;
+}
+
+
+
+/* =======================================
+   RESPONSIVE DESIGN (GLOBAL)
+======================================= */
+@media (max-width: 768px) {
+  .book-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-cover {
+    width: 140px;
+    height: 200px;
+  }
+
+  .container {
+    width: 92%;
+  }
+}

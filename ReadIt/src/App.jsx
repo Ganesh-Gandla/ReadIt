@@ -11,7 +11,6 @@ function App() {
 
   return (
     <>
-      <h1>ReadIt</h1>
       <NavBar />
       <Routes>
         <Route path='/' element={<BookList />}></Route>
