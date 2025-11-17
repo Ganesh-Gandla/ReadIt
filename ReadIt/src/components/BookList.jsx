@@ -1,7 +1,13 @@
 import BookItem from "./BookItem";
-import books from "../assets/mockData";
+
+import { useSelector } from "react-redux";
+
+
 
 function BookList() {
+  const library = useSelector((state) => state.library);
+  const books = library.books;
+
   return (
     <div className="book-list">
       <h2>Book List</h2>

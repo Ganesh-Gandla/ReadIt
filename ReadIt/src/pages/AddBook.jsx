@@ -1,7 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 
+import { useDispatch } from "react-redux";
+import { addBook } from "../utils/cartSlice";
+
 function AddBook() {
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const [book, setBook] = useState({
     title: "",
     author: "",
@@ -17,7 +25,8 @@ function AddBook() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    
+    dispatch(addBook(book));
     console.log("New Book Added:", book);
 
     alert("Book added successfully!");
@@ -31,6 +40,7 @@ function AddBook() {
       coverImage: "",
       description: "",
     });
+    navigate("/");
   };
 
   return (
