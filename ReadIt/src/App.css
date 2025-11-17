@@ -1,0 +1,139 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+nav {
+  background-color: #333;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav select{
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: none;
+}
+
+nav select:hover{
+  cursor: pointer;
+}
+
+nav select:focus{
+  outline: none;
+}
+
+nav option{
+  padding: 0.5rem;
+}
+
+nav option:hover{
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+nav option:focus{
+  outline: none;
+}
+
+nav option:checked{
+  background-color: #333;
+  color: white;
+}
+
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.book-item {
+  display: flex;
+  gap: 20px;
+  padding: 16px;
+  background: #fff;
+  margin: 12px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.book-cover {
+  width: 120px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.book-details {
+  flex: 1;
+}
+
+.book-title {
+  font-size: 20px;
+  margin: 0;
+}
+
+.book-author,
+.book-date,
+.book-pages {
+  color: #666;
+  margin: 4px 0;
+}
+
+.book-description {
+  margin-top: 10px;
+}
+
+.searchbox-wrapper {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.searchbox-input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.searchbox-input:focus {
+  border-color: #333;
+  outline: none;
+}
+
+
