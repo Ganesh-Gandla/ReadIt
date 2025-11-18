@@ -13,13 +13,7 @@ function NavBar() {
 
             <h4 className="nav-title">ReadIt</h4>
 
-            <select className="nav-select">
-                <option value="">All Categories</option>
-                <option value="Fiction">Fiction</option>
-                <option value="Non-Fiction">Non-Fiction</option>
-                <option value="Sci-Fi">Sci-Fi</option>
-                <option value="History">History</option>
-            </select>
+            
         </nav>
     );
 }

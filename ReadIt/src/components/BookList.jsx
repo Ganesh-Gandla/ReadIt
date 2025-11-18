@@ -1,20 +1,22 @@
 import BookItem from "./BookItem";
 
-import { useSelector } from "react-redux";
+function BookList({books}) {
 
-
-
-function BookList() {
-  const library = useSelector((state) => state.library);
-  const books = library.books;
 
   return (
-    <div className="book-list">
-      <h2>Book List</h2>
-      {books.map((book) => (
-        <BookItem key={book.id} book={book} />
-      ))}
+    <div className="book-list-container">
+
+      <div className="book-list-grid">
+        {books.length > 0 ? (
+          books.map((book) => (
+            <BookItem key={book.id} book={book} />
+          ))
+        ) : (
+          <p className="no-books">No books found in this category.</p>
+        )}
+      </div>
     </div>
   );
 }
+
 export default BookList;

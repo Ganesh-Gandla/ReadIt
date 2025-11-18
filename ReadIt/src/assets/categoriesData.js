@@ -2,62 +2,62 @@ const categoriesWithImages = [
   {
     id: 1,
     category: "Mystery",
-    image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f"
+    image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=300&auto=format&fit=crop"
   },
   {
     id: 2,
     category: "Fantasy",
-    image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9"
+    image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=300&auto=format&fit=crop"
   },
   {
     id: 3,
     category: "Sci-Fi",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=300&auto=format&fit=crop"
   },
   {
     id: 4,
     category: "Adventure",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=300&auto=format&fit=crop"
   },
   {
     id: 5,
     category: "Thriller",
-    image: "https://images.unsplash.com/photo-1505685296765-3a2736de412f"
+    image: "https://images.unsplash.com/photo-1505685296765-3a2736de412f?w=300&auto=format&fit=crop"
   },
   {
     id: 6,
     category: "Self-Help",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=300&auto=format&fit=crop"
   },
   {
     id: 7,
     category: "Non-Fiction",
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba"
+    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=300&auto=format&fit=crop"
   },
   {
     id: 8,
     category: "Crime",
-    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e"
+    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=300&auto=format&fit=crop"
   },
   {
     id: 9,
     category: "Romance",
-    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9"
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&auto=format&fit=crop"
   },
   {
     id: 10,
     category: "Drama",
-    image: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc"
+    image: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=300&auto=format&fit=crop"
   },
   {
     id: 11,
     category: "Biography",
-    image: "https://images.unsplash.com/photo-1517849845537-4d257902454a"
+    image: "https://images.unsplash.com/photo-1517849845537-4d257902454a?w=300&auto=format&fit=crop"
   },
   {
     id: 12,
     category: "Fiction",
-    image: "https://images.unsplash.com/photo-1512820790803-83ca734da794"
+    image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=300&auto=format&fit=crop"
   }
 ];
 
