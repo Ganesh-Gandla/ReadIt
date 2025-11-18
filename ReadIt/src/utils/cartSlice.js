@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import books from "../assets/mockData";
-console.log(books);
 
 const librarySlice = createSlice({
     name: "library",
