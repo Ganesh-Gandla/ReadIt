@@ -1,7 +1,4 @@
-/* =============================================================================
-   Global reset & base styles
-   - Keep these minimal and consistent across the site.
-   ============================================================================= */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -14,16 +11,12 @@ body {
   color: #333;
 }
 
-/* container wrapper used across pages */
 .container {
   width: 80%;
   margin: auto;
 }
 
-/* =============================================================================
-   HOME PAGE
-   - Styles for the home landing content, headings and section spacing
-   ============================================================================= */
+/* ---------- HOME PAGE ---------- */
 .home {
   padding: 20px;
   max-width: 1200px;
@@ -31,12 +24,10 @@ body {
   text-align: center;
 }
 
-/* Headings */
 .home h2 {
   font-size: 26px;
   color: #222;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin: 30px 0 10px;
 }
 
 .home p {
@@ -46,38 +37,29 @@ body {
   line-height: 1.5;
 }
 
-/* Section spacing for categories and popular books */
 .categories-container,
 .popular-books-section {
   margin-top: 40px;
 }
 
-/* =============================================================================
-   NAVBAR
-   - Top navigation layout: left items, centered title, sticky behavior
-   ============================================================================= */
+/* ---------- NAVBAR ---------- */
 .navbar {
   width: 100%;
   background: #222;
   padding: 14px 30px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-/* Navigation items (left side) */
 .nav-left {
   display: flex;
   gap: 25px;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-left li a {
@@ -85,7 +67,6 @@ body {
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
-
   padding: 8px 14px;
   border-radius: 6px;
   transition: all 0.3s ease;
@@ -96,22 +77,17 @@ body {
   transform: translateY(-2px);
 }
 
-/* Center title that visually centers in navbar (absolute centered) */
 .nav-title {
   font-size: 22px;
   font-weight: 700;
   color: #fff;
   letter-spacing: 1px;
-
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
-/* =============================================================================
-   CATEGORIES SECTION
-   - Container, title and responsive grid for category cards
-   ============================================================================= */
+/* ---------- CATEGORIES ---------- */
 .categories-container {
   padding: 40px 20px;
   max-width: 1100px;
@@ -126,20 +102,18 @@ body {
   color: #333;
 }
 
-/* Grid that auto-fits cards */
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
   gap: 20px;
   padding: 0 10px;
 }
 
-/* Category card visual */
 .category-card {
-  background: #ffffff;
+  background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   text-decoration: none;
@@ -147,17 +121,15 @@ body {
 
 .category-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 14px rgba(0,0,0,0.15);
 }
 
-/* Card image area */
 .category-img {
   width: 100%;
   height: 160px;
   object-fit: cover;
 }
 
-/* Card info area */
 .category-info {
   padding: 15px;
   background: #f8f8f8;
@@ -170,24 +142,18 @@ body {
   color: #333;
 }
 
-/* Remove underline for links inside the grid */
 .categories-grid a {
   text-decoration: none;
   color: inherit;
 }
 
-/* =============================================================================
-   BROWSE BOOKS PAGE - Search and Controls
-   - Search input, dropdown and wrapper styling
-   ============================================================================= */
-/* Search wrapper max width so it doesn't grow too large */
+/* ---------- BROWSE BOOKS ---------- */
 .searchbox-wrapper {
   width: 100%;
   max-width: 350px;
   position: relative;
 }
 
-/* Input visual styles */
 .searchbox-input {
   width: 100%;
   padding: 12px 16px;
@@ -201,10 +167,9 @@ body {
 
 .searchbox-input:focus {
   border-color: #4e73df;
-  box-shadow: 0 0 6px rgba(78, 115, 223, 0.3);
+  box-shadow: 0 0 6px rgba(78,115,223,0.3);
 }
 
-/* Browse container and heading */
 .browse-container {
   max-width: 1200px;
   margin: auto;
@@ -219,7 +184,6 @@ body {
   font-weight: 600;
 }
 
-/* Controls row */
 .browse-controls {
   display: flex;
   gap: 20px;
@@ -228,13 +192,12 @@ body {
   flex-wrap: wrap;
 }
 
-/* Category select dropdown */
 .category-select {
   padding: 12px 16px;
   font-size: 1rem;
   border: 2px solid #d6d6d6;
   border-radius: 8px;
-  background: white;
+  background: #fff;
   outline: none;
   cursor: pointer;
   transition: 0.2s ease;
@@ -242,10 +205,9 @@ body {
 
 .category-select:focus {
   border-color: #4e73df;
-  box-shadow: 0 0 5px rgba(78, 115, 223, 0.3);
+  box-shadow: 0 0 5px rgba(78,115,223,0.3);
 }
 
-/* Results container and empty state */
 .browse-results {
   margin-top: 20px;
 }
@@ -257,10 +219,7 @@ body {
   padding: 40px 0;
 }
 
-/* =============================================================================
-   BOOK LIST
-   - Grid of book cards, card layout and details
-   ============================================================================= */
+/* ---------- BOOK LIST ---------- */
 .book-list-container {
   width: 100%;
   margin: 20px auto;
@@ -269,7 +228,7 @@ body {
 
 .book-list-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
   gap: 20px;
   margin-top: 20px;
 }
@@ -278,18 +237,18 @@ body {
   font-size: 18px;
   text-align: center;
   color: #777;
-  grid-column: 1 / -1; /* span full grid width */
+  grid-column: 1 / -1;
   padding: 20px;
 }
 
-/* Book card wrapper and hover */
+/* Book Card */
 .book-card {
   width: 100%;
   max-width: 320px;
-  background: #ffffff;
+  background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
@@ -297,17 +256,15 @@ body {
 
 .book-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
 
-/* Book cover image */
 .book-card-img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-/* Card body & text */
 .book-card-body {
   padding: 15px;
   display: flex;
@@ -340,7 +297,6 @@ body {
   margin-bottom: 15px;
 }
 
-/* CTA button inside card */
 .book-card-btn {
   margin-top: auto;
   text-decoration: none;
@@ -357,17 +313,13 @@ body {
   background: #3c5cd1;
 }
 
-/* =============================================================================
-   BOOK PAGE (single book detail)
-   - Layout for book detail pages and image / meta layout
-   ============================================================================= */
+/* ---------- BOOK PAGE ---------- */
 .book-page {
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
 }
 
-/* Back button */
 .back-btn {
   display: inline-block;
   margin-bottom: 20px;
@@ -384,18 +336,16 @@ body {
   background: #3b5ac7;
 }
 
-/* Book detail layout */
 .book-details {
   display: flex;
   align-items: flex-start;
   gap: 25px;
-  background: #ffffff;
+  background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Book image and sizing */
 .book-img {
   width: 260px;
   height: 350px;
@@ -404,7 +354,6 @@ body {
   border: 1px solid #ddd;
 }
 
-/* Book info text */
 .book-info h2 {
   margin-bottom: 10px;
   color: #222;
@@ -421,7 +370,6 @@ body {
   color: #111;
 }
 
-/* Rating and description styles */
 .rating {
   font-size: 1.1rem;
   color: #e9b000;
@@ -433,7 +381,6 @@ body {
   line-height: 1.6;
 }
 
-/* Not-found / not available message */
 .not-found {
   text-align: center;
   padding: 40px;
@@ -441,17 +388,14 @@ body {
   font-size: 1.5rem;
 }
 
-/* =============================================================================
-   ADD BOOK PAGE - FORM
-   - Centered card with form fields and validation messages
-   ============================================================================= */
+/* ---------- ADD BOOK ---------- */
 .addbook-container {
   max-width: 600px;
   margin: 50px auto;
   padding: 25px;
-  background: #ffffff;
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .addbook-container h1 {
@@ -461,7 +405,6 @@ body {
   margin-bottom: 25px;
 }
 
-/* Form layout */
 .addbook-form {
   display: flex;
   flex-direction: column;
@@ -483,17 +426,15 @@ body {
 .addbook-form input:focus,
 .addbook-form textarea:focus {
   border-color: #4e73df;
-  box-shadow: 0 0 4px rgba(78, 115, 223, 0.3);
+  box-shadow: 0 0 4px rgba(78,115,223,0.3);
 }
 
-/* Error messages shown below inputs */
 .error {
   color: #d90429;
   font-size: 0.85rem;
   margin-top: -8px;
 }
 
-/* Submit button */
 .addbook-form button {
   padding: 12px;
   background: #4e73df;
@@ -510,10 +451,7 @@ body {
   background: #3c5ac0;
 }
 
-/* =============================================================================
-   ABOUT PAGE
-   - Article style content, section titles & lists
-   ============================================================================= */
+/* ---------- ABOUT PAGE ---------- */
 .about-page {
   max-width: 800px;
   margin: 40px auto;
@@ -550,10 +488,6 @@ body {
   margin-bottom: 20px;
 }
 
-.list li {
-  list-style: none;
-}
-
 .list-item {
   margin-bottom: 8px;
   font-size: 1rem;
@@ -567,12 +501,9 @@ body {
   margin-right: 8px;
 }
 
-/* =============================================================================
-   FOOTER
-   - Footer layout and section styles
-   ============================================================================= */
+/* ---------- FOOTER ---------- */
 .footer {
-  background: #1b1f29;
+  background: #1b1f29; 
   color: white;
   padding: 40px 20px 20px;
   margin-top: 40px;
@@ -582,7 +513,7 @@ body {
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
   gap: 30px;
 }
 
@@ -631,14 +562,11 @@ body {
   font-size: 14px;
 }
 
-/* =============================================================================
-   404 / ERROR PAGE
-   - Styles for the error screens and CTAs
-   ============================================================================= */
+/* ---------- 404 ERROR ---------- */
 .error-page {
   text-align: center;
   padding: 80px 20px;
-  color: rgb(27, 19, 19);
+  color: #111;
 }
 
 .error-code {
@@ -673,183 +601,25 @@ body {
   background: #3e5fe0;
 }
 
-/* =============================================================================
-   RESPONSIVE (existing)
-   - Keep these as-is — they already provide a good mobile baseline.
-   ============================================================================= */
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
-  .home {
-    padding: 15px;
-  }
-
-  .home h2 {
-    font-size: 22px;
-  }
-
-  .home p {
-    font-size: 15px;
-  }
-
-  .browse-controls {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 15px;
-  }
-
-  .category-select {
-    width: 100%;
-  }
-
-  .book-details {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .container {
-    width: 92%;
-  }
-
-  .search-container>div {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .category-select {
-    width: 100%;
-  }
-
-  .book-details {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .book-img {
-    width: 100%;
-    max-width: 260px;
-  }
-
-  .book-info p {
-    text-align: left;
-  }
-
-  .book-card {
-    max-width: 100%;
-  }
+  .home { padding: 15px; }
+  .home h2 { font-size: 22px; }
+  .home p { font-size: 15px; }
+  .browse-controls { flex-direction: column; gap: 15px; }
+  .category-select { width: 100%; }
+  .book-details { flex-direction: column; align-items: center; text-align: center; }
+  .book-img { width: 100%; max-width: 260px; }
+  .book-info p { text-align: left; }
+  .book-card { max-width: 100%; }
+  .container { width: 92%; }
+  .navbar { flex-direction: column; align-items: flex-start; justify-content: center; gap: 10px; }
+  .nav-title { position: static; transform: none; align-self: center; }
+  .nav-left { gap: 15px; justify-content: space-around; width: 100%;}
 }
 
-/* Smaller phones */
 @media (max-width: 480px) {
-  .addbook-container {
-    margin: 20px;
-    padding: 20px;
-  }
-
-  .addbook-container h1 {
-    font-size: 1.7rem;
-  }
-
-  .searchbox-input {
-    font-size: 0.9rem;
-    padding: 10px 14px;
-  }
-}
-
-/* =============================================================================
-   ADDITIONAL RESPONSIVE IMPROVEMENTS (non-destructive)
-   - These rules extend responsiveness for medium / small screens
-   - They only apply inside media queries so desktop behavior remains unchanged.
-   ============================================================================= */
-
-/* Tablet / small laptop adjustments (keeps visual parity but improves spacing) */
-@media (max-width: 1024px) {
-  /* Slightly reduce side paddings for medium screens to avoid frequent wrapping */
-  .navbar {
-    padding: 12px 20px;
-  }
-
-  /* Make category grid slightly denser on medium screens */
-  .categories-grid {
-    gap: 16px;
-  }
-
-  /* Allow book-list-grid cards to be a bit smaller to fit more */
-  .book-list-grid {
-    gap: 18px;
-  }
-}
-
-/* Nav behavior for narrower screens:
-   - Allow horizontal scrolling for nav items instead of wrapping or overflowing.
-   - Center the title in the flow (so it doesn't overlap nav items on small screens).
-*/
-@media (max-width: 700px) {
-  .nav-left {
-    gap: 14px;
-    overflow-x: auto;           /* enable horizontal scrolling of menu items */
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 6px;        /* give space for the scroll bar if shown */
-  }
-
-  /* Make the navbar title participate in normal flow (prevents overlap) */
-  .nav-title {
-    position: static;
-    transform: none;
-    margin: 0 auto;
-    left: auto;
-  }
-
-  /* increase tap target sizes for small screens */
-  .nav-left li a {
-    padding: 10px 16px;
-    font-size: 15px;
-  }
-
-  /* Slightly reduce card image height so content fits better on small screens */
-  .category-img {
-    height: 140px;
-  }
-
-  .book-card-img {
-    height: 170px;
-  }
-}
-
-/* Ultra-small phones: fine tune fonts and touch targets */
-@media (max-width: 360px) {
-  .home h2 {
-    font-size: 20px;
-  }
-
-  .browse-heading {
-    font-size: 1.6rem;
-  }
-
-  .book-card-title {
-    font-size: 1.05rem;
-  }
-
-  .book-card-btn {
-    padding: 12px;
-    font-size: 0.95rem;
-  }
-}
-
-/* =============================================================================
-   Accessibility & motion preferences
-   - Reduced motion: disable non-essential animations and transitions.
-   - Focus-visible: improve keyboard focus indication.
-   ============================================================================= */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
-    animation: none !important;
-  }
-}
-
-/* visible focus for keyboard users (better than outline:none) */
-:focus-visible {
-  outline: 3px solid rgba(78, 115, 223, 0.35);
-  outline-offset: 2px;
-  border-radius: 6px;
+  .addbook-container { margin: 20px; padding: 20px; }
+  .addbook-container h1 { font-size: 1.7rem; }
+  .searchbox-input { font-size: 0.9rem; padding: 10px 14px; }
 }

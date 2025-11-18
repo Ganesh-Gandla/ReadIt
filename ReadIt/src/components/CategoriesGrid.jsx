@@ -1,4 +1,3 @@
-import React from "react";
 import "../App.css";
 import categoriesData from "../assets/categoriesData";
 import { Link } from "react-router-dom";
@@ -10,7 +9,7 @@ function CategoriesGrid() {
 
       <div className="categories-grid">
         {categoriesData.map((cat) => (
-          <Link to={`/books/${cat.category}`}><div className="category-card" key={cat.id}>
+          <Link to={`/books/${cat.category}`} key={cat.id}><div className="category-card" >
             <img src={cat.image} alt={cat.category} className="category-img" />
 
             <div className="category-info">
