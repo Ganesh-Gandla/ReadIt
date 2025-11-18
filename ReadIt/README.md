@@ -1,16 +1,61 @@
-# React + Vite
+# 📚 BookLibrary
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **Book Library** web app built with **React.js**. Browse, search, and view details of your favorite books in a clean and user-friendly interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## GitHub Link
+https://github.com/Ganesh-Gandla/ReadIt.git
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Browse books by category
+* Search books by title or author
+* View detailed information about each book
+* Add new books (Admin / AddBook page)
+* Responsive design for mobile, tablet, and desktop
+* Custom 404 page for invalid routes
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+* **Frontend:** React.js, CSS (Flexbox & Grid)
+* **Routing:** React Router
+* **State Management:** React Hooks
+* **Styling:** Modern responsive CSS
+* **Icons & UI:** CSS transitions & hover effects
+
+---
+
+## Installation & Running Locally
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Ganesh-Gandla/ReadIt.git
+```
+
+### 2. Navigate to the Project Folder
+
+```bash
+cd <project-folder-name>
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the Development Server
+
+```bash
+npm start
+```
+
+* Open [http://localhost:5173](http://localhost:5173) in your browser.
+* The app reloads automatically on code changes.
+
+
